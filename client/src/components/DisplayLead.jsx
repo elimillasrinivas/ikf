@@ -33,6 +33,7 @@ const DisplayLead = () => {
           type="text"
           value={leadId}
           onChange={handleInputChange}
+           placeholder='e.g. LEAD01'
           className="form-control"
         />
       </div>
