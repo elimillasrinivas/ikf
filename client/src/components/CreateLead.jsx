@@ -37,7 +37,7 @@ const CreateLead = () => {
     };
 console.log(data);
     try {
-      const response = await axios.post('http://localhost:5000/api/create-lead', data);
+      const response = await axios.post('https://ikfinance.onrender.com/api/create-lead', data);
       console.log('Lead created:', response.data);
       setAlertType('success'); 
       setAlertMessage('Lead created successfully'); 
