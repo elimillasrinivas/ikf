@@ -40,7 +40,7 @@ console.log(data);
       const response = await axios.post('https://ikfinance.onrender.com/api/create-lead', data);
       console.log('Lead created:', response.data);
       setAlertType('success'); 
-      setAlertMessage('Lead created successfully'); 
+      setAlertMessage(`Lead created successfully, Your ID : ${response.data.serialNumber}`) 
       
     
       setLeadData({
