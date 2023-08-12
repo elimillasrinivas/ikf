@@ -7,7 +7,9 @@ const apiRoutes = require('./routes/api');
 const app = express();
 const PORT = 5000;
 
-app.use(cors());
+app.use(cors({
+  origin:"https://ikf-elimillasrinivas.vercel.app"
+}));
 app.use(express.json());
 
 
