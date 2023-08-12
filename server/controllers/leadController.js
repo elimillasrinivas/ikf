@@ -38,7 +38,7 @@ exports.getLeadById = async (req, res) => {
     }
     res.json(lead);
   } catch (error) {
-    res.status(500).json({ message: 'Error retrieving lead' });
+    res.status(500).json({ message: 'Error retrieving lead', error });
   }
 };
  
