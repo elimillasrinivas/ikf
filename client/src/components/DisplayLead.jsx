@@ -5,7 +5,7 @@ import axios from 'axios'; // Import Axios library
 const DisplayLead = () => {
   const [leadId, setLeadId] = useState('');
   const [leadDetails, setLeadDetails] = useState(null);
-
+  const [error,setError]=useState("")
   const handleInputChange = (event) => {
     setLeadId(event.target.value);
   };
@@ -17,6 +17,7 @@ const DisplayLead = () => {
       setLeadDetails(fetchedLeadDetails);
     } catch (error) {
       console.error('Error fetching lead details:', error);
+      setError(error.response.data.message)
       setLeadDetails(null); // Clear leadDetails on error
     }
   };
@@ -73,6 +74,7 @@ const DisplayLead = () => {
           </table>
         </div>
       )}
+      <p style={{marginTop:"1rem", color:"red"}}>{error}</p>
       <div className="d-flex gap-3">
         <button onClick={handleViewLead} className="btn btn-primary mt-2">View</button>
         <Link to="/" > <button  className="btn btn-secondary mt-2">Main Menu</button></Link>
