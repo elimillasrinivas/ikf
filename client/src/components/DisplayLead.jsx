@@ -39,7 +39,7 @@ const DisplayLead = () => {
       {leadDetails && (
         <div>
           <h2>Lead Details</h2>
-          <table className="table border">
+          <table className="table table-bordered ">
             <tbody>
               <tr>
                 <td>Name</td>
