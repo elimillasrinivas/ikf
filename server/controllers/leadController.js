@@ -18,6 +18,7 @@ exports.createLead = async (req, res) => {
 
     res.status(201).json(newLead);
   } catch (error) {
+      console.log(error);
     res.status(500).json({ message: 'Error creating lead', error });
   }
 };
@@ -38,6 +39,7 @@ exports.getLeadById = async (req, res) => {
     }
     res.json(lead);
   } catch (error) {
+      console.log(error);
     res.status(500).json({ message: 'Error retrieving lead', error });
   }
 };
