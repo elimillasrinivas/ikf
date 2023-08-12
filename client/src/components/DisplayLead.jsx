@@ -14,7 +14,7 @@ const DisplayLead = () => {
     try {
       const response = await axios.get(`https://ikfinance.onrender.com/api/get-lead/${leadId}`);
       const fetchedLeadDetails = response.data;
-      setLeadDetails(fetchedLeadDetails);
+      setLeadDetails(fetchedLeadDetails.lead);
       if(fetchedLeadDetails.message==='Lead found'){
         setError("")
       }
