@@ -1,54 +1,3 @@
-// import axios from 'axios';
-// import React, { useState } from 'react';
-// import { Link } from 'react-router-dom';
-
-// const DisplayLead = () => {
-//   const [leadId, setLeadId] = useState('');
-//   const [leadDetails, setLeadDetails] = useState(null);
-
-//   const handleInputChange = (event) => {
-//     setLeadId(event.target.value);
-//   };
-
-//   const handleViewLead = async () => {
-//     try {
-//       const response = await axios.get(`http://localhost:5000/api/get-lead/${leadId}`);
-//       const fetchedLeadDetails = response.data;
-//       setLeadDetails(fetchedLeadDetails);
-//     } catch (error) {
-//       console.error('Error fetching lead details:', error);
-//       setLeadDetails(null);
-//     }
-//   };
-
-//   return (
-//     <div className="container mt-5 w-50">
-//       <h1>Display Lead</h1>
-//       <div className="form-group">
-//         <input
-//           type="text"
-//           value={leadId}
-//           onChange={handleInputChange}
-//           className="form-control"
-//         />
-//       </div>
-//       {leadDetails && (
-//         <div>
-//           {/* Display leadDetails */}
-//         </div>
-//       )}
-//       <div className="d-flex gap-3">
-//       <button onClick={handleViewLead} className="btn btn-primary mt-2">View</button>
-//           <Link to="/" > <button  className="btn btn-secondary mt-2">Main Menu</button></Link>
-//         </div>
-//     </div>
-//   );
-// };
-
-// export default DisplayLead;
-
-
-
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import axios from 'axios'; // Import Axios library
@@ -63,7 +12,7 @@ const DisplayLead = () => {
 
   const handleViewLead = async () => {
     try {
-      const response = await axios.get(`http://localhost:5000/api/get-lead/${leadId}`);
+      const response = await axios.get(`https://ikfinance.onrender.com/api/get-lead/${leadId}`);
       const fetchedLeadDetails = response.data;
       setLeadDetails(fetchedLeadDetails);
     } catch (error) {
