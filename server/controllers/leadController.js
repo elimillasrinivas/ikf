@@ -37,7 +37,7 @@ exports.getLeadById = async (req, res) => {
     if (!lead) {
       return res.status(404).json({ message: 'Lead not found' });
     }
-    res.json(lead);
+     res.json({lead,message:"Lead found"});
   } catch (error) {
       console.log(error);
     res.status(500).json({ message: 'Error retrieving lead', error });
